@@ -130,6 +130,34 @@ body {
     }
 }
 
+//Headings
+.encabezado {
+    color: $secondary-color;
+    @include text-transform(uppercase);
+    @include font-bold(900);
+    font-size: rem-calc(18);
+    margin-bottom: rem-calc(100);
+    margin-top: rem-calc(40);
+    text-align: center;
+    span {
+        color: $primary-color;
+        font-size: rem-calc(38);
+        display: table;
+        margin: 0 auto;
+    }
+    &:after {
+        content: '';
+        display: block;
+        margin:rem-calc(-15) auto 0 auto;
+        
+        @include box(rem-calc(80), rem-calc(80));
+        background-image: url(../img/coffee.svg);
+        background-size: rem-calc(80);
+        background-repeat: no-repeat;
+        
+    }
+}
+
 .icono-menu {
     @include hamburger($white, $white, 50px, 32px, 6px, 3);
 }
