@@ -1,6 +1,10 @@
 // Fuente Google Fonts
 $bellefair :'Bellefair',
 serif;
+$crema: #ebe7de;
+body {
+    background-color: $crema;
+}
 
 @mixin background_image($pagina) {
     background-image: url(../img/destacadas/chico/#{$pagina}.jpg);
@@ -22,14 +26,12 @@ serif;
     background-size: cover;
     height: 100vh;
     min-height: rem-calc(600);
-
     &.inicio {
         @include background_image(inicio);
     }
     &.nosotros {
         @include background_image(nosotros);
     }
-    
     .header-superior {
         @include xy-grid();
         @include flex-align(center, top);
@@ -135,8 +137,8 @@ serif;
 .site-footer {
     background-color: $primary-color;
     .contenedor {
-        background-color: $white;
         .contenido-footer {
+            background-color: $white;
             @include xy-grid();
             @include padding(2, 2, 4, 2);
             .footer-box {
@@ -168,3 +170,12 @@ serif;
     }
 }
 
+.contenido-principal {
+    background-color: $white;
+    padding: rem-calc(10);
+    @include breakpoint(medium) {
+        margin-top: rem-calc(-120px);
+        @include position(relative);
+        padding: rem-calc(50);
+    }
+}
